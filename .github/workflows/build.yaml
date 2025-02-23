@@ -1,16 +1,12 @@
 name: Build Binaries
 
 on:
-  pull_request:
-    branches:
+  push:
+    tags:
       - '*'
-    paths-ignore:
-      - 'docs/**'
-      - '**.md'
-      - 'script/gcg/**'
 
 env:
-  GO_VERSION: '1.23'
+  GO_VERSION: '1.24'
   CGO_ENABLED: 0
 
 jobs:

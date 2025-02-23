@@ -11,7 +11,7 @@ on:
       - 'integration/k8s_conformance_test.go'
 
 env:
-  GO_VERSION: '1.23'
+  GO_VERSION: '1.24'
   CGO_ENABLED: 0
 
 jobs:
