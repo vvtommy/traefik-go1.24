@@ -79,3 +79,13 @@ jobs:
           GOARCH: ${{ matrix.arch }}
           GOARM: ${{ matrix.goarm }}
         run: make binary
+      - name: Artifact binaries
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.os }}-binaries
+          path: |
+            dist/**/*_checksums.txt
+            dist/**/*.tar.gz
+            dist/**/*.zip
+          retention-days: 1
+
