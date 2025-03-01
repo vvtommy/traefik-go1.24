@@ -107,7 +107,5 @@ jobs:
         with:
           name: ${{ matrix.os }}-binaries
           path: |
-            dist/**/*_checksums.txt
-            dist/**/*.tar.gz
-            dist/**/*.zip
+            dist/**/*
           retention-days: 1
